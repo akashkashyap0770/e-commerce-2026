@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Signup</title>
+  <%- include("./partials/head.ejs") %>
+</head>
+<body>
+
+<div class="container mt-5">
+  <h2>Signup</h2>
+
+  <% if (message) { %>
+    <div class="alert alert-danger"><%= message %></div>
+  <% } %>
+
+  <form action="/signup" method="post">
+    <input name="user_name" class="form-control mb-2" placeholder="Name" />
+    <input name="user_email" class="form-control mb-2" placeholder="Email" />
+    <input type="password" name="user_password" class="form-control mb-2" placeholder="Password" />
+    <input name="user_age" class="form-control mb-2" placeholder="Age" />
+
+    <select name="user_gender" class="form-control mb-2">
+      <option value="">Select Gender</option>
+      <option value="male">Male</option>
+      <option value="female">Female</option>
+    </select>
+
+    <input name="user_address" class="form-control mb-2" placeholder="Address" />
+
+    <button class="btn btn-primary">Signup</button>
+  </form>
+
+  <p class="mt-3">Already have account? <a href="/signin">Signin</a></p>
+</div>
+
+</body>
+</html>

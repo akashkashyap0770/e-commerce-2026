@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Home</title>
+    <%- include("./partials/head.ejs") %>
+  </head>
+  <body>
+    <%- include("./partials/navbar.ejs", { user: user }) %>
+
+    <div class="container mt-5">
+      <div class="alert alert-success">
+        ✅ Welcome, <strong><%= user %></strong>
+      </div>
+      <h2>Home Page</h2>
+    </div>
+
+    <%- include("./partials/scripts.ejs") %>
+  </body>
+</html>
