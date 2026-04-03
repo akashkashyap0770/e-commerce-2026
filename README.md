@@ -1,8 +1,7 @@
 # Mongodb Atlas
 
-- username :- akashkashyap0770_db_user
-- password :- Y0LoaCClHQuR6QfQ
-- mongodb+srv://akashkashyap0770_db_user:Y0LoaCClHQuR6QfQ@cluster0.bgztbs7.mongodb.net/?appName=Cluster0
+<!-- - username :- akashkashyap0770_db_user
+- password :- 8CXkifVH1jBe1r7W -->
 
 <!-- -------------------------------------------------------------------------------------------------- -->
 
