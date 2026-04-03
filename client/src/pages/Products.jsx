@@ -15,7 +15,7 @@ function Products() {
     <div className="max-w-7xl mx-auto w-full flex flex-col p-4">
       <h1 className="text-2xl mb-4 p-4">All Products</h1>
 
-      <div className="p-4 grid grid-cols-3 gap-8 mt-4">
+      <div className="p-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-4">
         {/* <h1 className="text-3xl">🎉 Welcome {user?.user_name?.toUpperCase()}</h1> */}
         {products.map((product) => (
           <ProductCard key={product.id} product={product} />

@@ -49,13 +49,13 @@ function Signin() {
     <div className="h-screen flex justify-center items-center pb-20">
       <form
         onSubmit={handleSubmit}
-        className="mt-16 p-4 flex flex-col gap-6 ring-fuchsia-600 shadow-lg shadow-fuchsia-600/50"
+        className="w-[300px] md:w-[400px] mt-16 p-4 flex flex-col gap-5 ring-fuchsia-600 shadow-lg shadow-fuchsia-600/50"
       >
         <h2 className="text-xl font-bold text-center">Signup</h2>
-        <div className="flex gap-x-6 items-center">
+        <div className="flex gap-x-5 items-center">
           <label className="text-2xl">Email:</label>
           <input
-            className="p-2"
+            className="p-1 md:p-2 w-full"
             type="email"
             name="user_email"
             value={form.user_email}
@@ -63,10 +63,10 @@ function Signin() {
             onChange={handleChange}
           />
         </div>
-        <div className="flex gap-x-6">
+        <div className="flex gap-x-5">
           <label className="text-2xl">Password:</label>
           <input
-            className="p-2"
+            className="p-1 md:p-2 w-full"
             type="password"
             name="user_password"
             value={form.user_password}

@@ -61,13 +61,13 @@ function Signup() {
     <div className="h-screen flex justify-center items-center pb-20">
       <form
         onSubmit={handleSubmit}
-        className="w-[400px] mt-16 p-4 flex flex-col gap-6 ring-fuchsia-600 shadow-lg shadow-fuchsia-600/50"
+        className="w-[300px] md:w-[400px] mt-16 p-4 flex flex-col gap-3 md:gap-5 ring-fuchsia-600 shadow-lg shadow-fuchsia-600/50"
       >
         <h2 className="text-xl font-bold text-center">Signup</h2>
-        <div className="flex gap-x-6 items-center">
+        <div className="flex gap-x-5 items-center">
           <label>Name:</label>
           <input
-            className="p-2"
+            className="p-1 md:p-2 w-full"
             type="text"
             name="user_name"
             value={form.user_name}
@@ -75,10 +75,10 @@ function Signup() {
             onChange={handleChange}
           />
         </div>
-        <div className="flex gap-x-6 items-center">
+        <div className="flex gap-x-5 items-center">
           <label>Email:</label>
           <input
-            className="p-2"
+            className="p-1 md:p-2 w-full"
             type="email"
             name="user_email"
             value={form.user_email}
@@ -86,10 +86,10 @@ function Signup() {
             onChange={handleChange}
           />
         </div>
-        <div className="flex gap-x-6 items-center">
+        <div className="flex gap-x-5 items-center">
           <label>Password:</label>
           <input
-            className="p-2"
+            className="p-1 md:p-2 w-full"
             type="password"
             name="user_password"
             value={form.user_password}
@@ -97,10 +97,10 @@ function Signup() {
             onChange={handleChange}
           />
         </div>
-        <div className="flex gap-x-6 items-center">
+        <div className="flex gap-x-5 items-center">
           <label>Age:</label>
           <input
-            className="p-2"
+            className="p-1 md:p-2 w-full"
             type="number"
             name="user_age"
             value={form.user_age}
@@ -108,21 +108,22 @@ function Signup() {
             onChange={handleChange}
           />
         </div>
-        <div className="flex gap-x-6 items-center">
+        <div className="flex gap-x-5 items-center">
           <select
             name="user_gender"
             value={form.user_gender}
             onChange={handleChange}
+            className="bg-black w-full"
           >
             <option value="male">Male</option>
             <option value="female">Female</option>
             <option value="other">Other</option>
           </select>
         </div>
-        <div className="flex gap-x-6 items-center">
+        <div className="flex gap-x-5 items-center">
           <label>Address:</label>
           <input
-            className="p-2"
+            className="p-1 md:p-2 w-full"
             type="text"
             name="user_address"
             value={form.user_address}
