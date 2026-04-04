@@ -3,12 +3,6 @@ import { Navigate, Link } from "react-router-dom";
 import { useAuth } from "../context/AuthContext";
 
 function PublicHomePage() {
-  const { user, loading } = useAuth();
-
-  if (loading) return <h1>Loading...</h1>;
-
-  if (!user) return <Navigate to="/signup" />;
-
   return (
     <div className="min-h-screen max-w-7xl w-full mx-auto flex flex-col items-center justify-center px-4 pb-12 space-y-4">
       <h1 className="text-3xl md:text-5xl tracking-wide font-bold text-emerald-400 text-center">

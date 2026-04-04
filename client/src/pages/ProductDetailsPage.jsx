@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from "react";
 import API from "../utils/axios";
 import { useNavigate, useParams } from "react-router-dom";
+import { useAuth } from "../context/AuthContext";
 
 function ProductDetailsPage() {
+  const { user } = useAuth();
   const { id } = useParams();
   const navigate = useNavigate();
   const [product, setproduct] = useState(null);
@@ -15,12 +17,15 @@ function ProductDetailsPage() {
   }, [id]);
 
   const handleAddToCart = async () => {
+    if (!user) return navigate("/signin");
+
     await API.post("/api/cart", {
       productId: product.id,
       title: product.title,
       price: product.price,
       image: product.thumbnail,
     });
+
     alert("Added to cart");
     navigate("/cart");
   };

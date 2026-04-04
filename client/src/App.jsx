@@ -21,24 +21,16 @@ function App() {
       errorElement: <Error />,
       children: [
         {
-          index: true,
+          path: "/",
           element: <PublicHomePage />,
         },
         {
           path: "products",
-          element: (
-            <ProtectedRoute>
-              <Products />
-            </ProtectedRoute>
-          ),
+          element: <Products />,
         },
         {
           path: "product/:id",
-          element: (
-            <ProtectedRoute>
-              <ProductDetailsPage />
-            </ProtectedRoute>
-          ),
+          element: <ProductDetailsPage />,
         },
         {
           path: "cart",

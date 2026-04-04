@@ -45,11 +45,11 @@ function Navbar() {
             </>
           ) : (
             <>
+              <Link to="/cart" className="hover:text-blue-600">
+                🛒 Cart
+              </Link>
               <Link to="/signin" className="hover:text-blue-600">
                 Signin
-              </Link>
-              <Link to="/signup" className="hover:text-blue-600">
-                Signup
               </Link>
             </>
           )}
