@@ -14,7 +14,7 @@ const PORT = process.env.PORT || 5000;
 // Cors: cross origin system
 app.use(
   cors({
-    origin: "http://localhost:5173",
+    origin: ["http://localhost:5173", "https://e-commerce-2026.netlify.app/"],
     credentials: true,
   }),
 );
