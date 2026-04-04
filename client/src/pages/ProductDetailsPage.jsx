@@ -30,7 +30,8 @@ function ProductDetailsPage() {
     navigate("/cart");
   };
 
-  if (!product) return <h1 className="text-center mt-6">Loading...</h1>;
+  if (!product)
+    return <h1 className="h-screen bg-blacktext-center mt-6">Loading...</h1>;
 
   return (
     <div className="min-h-screen flex items-center justify-center px-4">
