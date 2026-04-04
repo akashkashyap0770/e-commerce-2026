@@ -30,39 +30,37 @@ function ProductDetailsPage() {
     navigate("/cart");
   };
 
-  if (!product)
-    return (
-      <h1 className="min-h-screen flex items-center justify-center">
-        Loading...
-      </h1>
-    );
+  if (!product) return <h1 className="text-center mt-6">Loading...</h1>;
 
   return (
-    <div className="min-h-screen max-w-7xl mx-auto px-4 py-10 flex flex-col md:flex-row gap-8 justify-center items-center">
-      <img
-        src={product.thumbnail}
-        alt={product.title}
-        className="w-full max-w-sm md:w-[400px] md:h-[400px] object-cover rounded-lg"
-      />
-      <div className="flex flex-col items-start gap-y-3 w-full max-w-sm md:max-w-lg">
-        <h2 className="text-2xl md:text-3xl text-emerald-400 font-bold">
-          {product.title}
-        </h2>
-        <p className="text-lg md:text-xl text-gray-400 font-semibold">
-          {product.brand}
-        </p>
-        <p className="text-sm md:text-base text-slate-200 leading-relaxed">
-          {product.description}
-        </p>
-        <p className="text-lg md:text-xl text-emerald-400 font-semibold">
-          ₹ {product.price}
-        </p>
-        <button
-          onClick={handleAddToCart}
-          className="w-full md:w-auto bg-emerald-400 text-black font-semibold px-6 py-2 rounded hover:bg-emerald-300"
-        >
-          Add to Cart
-        </button>
+    <div className="min-h-screen flex items-center justify-center px-4">
+      <div className="bg-gray-900 rounded-2xl shadow-xl p-6 max-w-4xl w-full grid md:grid-cols-2 gap-6">
+        <img
+          src={product.thumbnail}
+          alt={product.title}
+          className="w-full h-80 object-cover rounded-xl"
+        />
+
+        <div className="flex flex-col justify-between">
+          <div>
+            <h1 className="text-2xl font-bold text-white">{product.title}</h1>
+            <p className="text-gray-400 mt-2">{product.brand}</p>
+            <p className="text-gray-300 mt-4">{product.description}</p>
+          </div>
+
+          <div className="mt-6">
+            <p className="text-emerald-400 text-2xl font-bold mb-4">
+              ₹{product.price}
+            </p>
+
+            <button
+              onClick={handleAddToCart}
+              className="w-full bg-emerald-400 text-black py-3 rounded-xl font-semibold hover:bg-emerald-300"
+            >
+              Add to Cart
+            </button>
+          </div>
+        </div>
       </div>
     </div>
   );
