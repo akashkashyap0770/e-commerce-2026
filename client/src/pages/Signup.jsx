@@ -44,7 +44,7 @@ function Signup() {
 
       const res = await API.post("/signup", form);
 
-      alert(res.data.message);
+      alert(res.data.message || "Signup successful");
 
       // optional: auto login
       // setUser(res.data.user);
@@ -61,7 +61,7 @@ function Signup() {
     <div className="h-screen flex justify-center items-center pb-20">
       <form
         onSubmit={handleSubmit}
-        className="w-[300px] md:w-[400px] mt-16 p-4 flex flex-col gap-3 md:gap-5 ring-fuchsia-600 shadow-lg shadow-fuchsia-600/50"
+        className="w-[300px] md:w-[400px] bg-black mt-16 p-4 flex flex-col gap-3 md:gap-5 ring-fuchsia-600 shadow-lg shadow-fuchsia-600/50"
       >
         <h2 className="text-xl font-bold text-center">Signup</h2>
         <div className="flex gap-x-5 items-center">

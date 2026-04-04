@@ -133,7 +133,11 @@ async function handleSigninUser(req, res) {
     // 🍪 cookie set
     // ➡️ httpOnly: true :- Cookie ko JavaScript access nahi kar sakta | Hacker (XSS attack) cookie chura sakta hai
     // ➡️ sameSite: "lax" :- Cookie sirf same site requests me bheji jayegi | Ye CSRF attack (Cross-Site Request Forgery) se bachata hai.
-    res.cookie("token", token, { httpOnly: true, sameSite: "lax" });
+    res.cookie("token", token, {
+      httpOnly: true,
+      secure: true,
+      sameSite: "None",
+    });
 
     // return res.redirect("/");
     res.json({
