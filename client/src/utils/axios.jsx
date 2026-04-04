@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const API = axios.create({
-  baseURL: "http://localhost:5000",
+  baseURL: "https://e-commerce-2026.onrender.com",
   withCredentials: true, // cookie send karne ke liye MUST
 });
 
