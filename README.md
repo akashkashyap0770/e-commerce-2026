@@ -1,18 +1,24 @@
-# Mongodb Atlas
+# 🛒 E-Commerce App  
+🔗 Live Demo: https://e-commerce-2026.netlify.app/
 
-<!-- - username :- akashkashyap0770_db_user
-- password :- 8CXkifVH1jBe1r7W -->
-
-<!-- -------------------------------------------------------------------------------------------------- -->
-
-# 🛒 E-Commerce App
-
-A full-stack E-Commerce web application with user authentication,
+A full-stack E-Commerce web application with user authentication,  
 product browsing, and cart management.
+
+---
+
+## 🌐 Database (Cloud)
+
+This project uses **MongoDB Atlas** as a cloud database.
+
+- No local MongoDB setup required  
+- Secure and scalable cloud database  
+- Connected using Mongoose  
+
+---
 
 ## 🛠️ Tech Stack
 
-**Frontend (Client)**
+### Frontend (Client)
 
 - React 19
 - Vite
@@ -20,15 +26,17 @@ product browsing, and cart management.
 - React Router DOM
 - Axios
 
-**Backend (Server)**
+### Backend (Server)
 
 - Node.js
 - Express 5
-- MongoDB + Mongoose
+- MongoDB Atlas + Mongoose
 - JWT Authentication
 - Bcrypt (Password Hashing)
 - Cookie Parser
 - Express Session
+
+---
 
 ## 📁 Project Structure
 
@@ -36,27 +44,39 @@ E-Commerce/
 ├── client/ → React + Vite Frontend
 └── server/ → Node.js + Express Backend
 
+---
+
 ## 🚀 Getting Started
 
 ### Install Dependencies
 
-cd client && npm install
-cd server && npm install
+cd client && npm install  
+cd server && npm install  
 
 ### Run Development Server
 
-cd client → npm run dev
-cd server → npm run dev
+cd client  
+npm run dev  
 
-```
+cd server  
+npm run dev  
 
 ---
 
-### **GitHub Par Description Kaise Daalein:**
+## 🔐 Environment Variables
 
-1. GitHub repo open karo
-2. **About** section mein ⚙️ icon click karo
-3. Description mein paste karo:
-```
+Create a `.env` file in the server folder and add:
 
-Full-stack E-Commerce app built with React 19, Vite, Tailwind CSS, Node.js, Express, and MongoDB
+MONGO_URI=your_mongodb_atlas_connection_string  
+JWT_SECRET=your_secret_key  
+
+---
+
+## ✨ Features
+
+- User Authentication (Login / Signup)
+- Secure Password Hashing (Bcrypt)
+- JWT-based Authorization
+- Product Listing
+- Add to Cart Functionality
+- REST API Integration
