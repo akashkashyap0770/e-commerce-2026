@@ -59,16 +59,7 @@ cd client
 npm run dev  
 
 cd server  
-npm run dev  
-
----
-
-## 🔐 Environment Variables
-
-Create a `.env` file in the server folder and add:
-
-MONGO_URI=your_mongodb_atlas_connection_string  
-JWT_SECRET=your_secret_key  
+npm run dev    
 
 ---
 
